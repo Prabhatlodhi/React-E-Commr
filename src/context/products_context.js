@@ -19,7 +19,7 @@ const initialState = {
   products_error:false,
   products:[],
   featured_products:[],
-  
+
 }
 
 const ProductsContext = React.createContext()
@@ -35,6 +35,7 @@ export const ProductsProvider = ({ children }) => {
   }
 
   const fetchProducts = async(url)=>{
+    dispatch({type: GET_PRODUCTS_BEGIN})
     const response = await axios.get(url)
   }
 
