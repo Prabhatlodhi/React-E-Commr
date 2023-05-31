@@ -19,7 +19,7 @@ const initialState = {
   sort: "price-lowest",
   filters: {
     text: "",
-    comapny: "all",
+    company: "all",
     category: "all",
     color: "all",
     min_price: 0,
