@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useReducer } from "react";
 import reducer from "../reducers/cart_reducer";
+
 import {
   ADD_TO_CART,
   REMOVE_CART_ITEM,
@@ -39,7 +40,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
-  }, [state, cart]);
+  }, [state.cart]);
 
   return (
     <CartContext.Provider
