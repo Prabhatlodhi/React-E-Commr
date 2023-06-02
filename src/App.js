@@ -16,32 +16,32 @@ import {
 function App() {
   return (
     <Router>
-    <Navbar/>
-    <Sidebar/>
-       <Switch>
-        <Route exact path='/'>
-            <Home/>
+      <Navbar />
+      <Sidebar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
         </Route>
-        <Route exact path='/about'>
-            <About/>
+        <Route exact path="/about">
+          <About />
         </Route>
-        <Route exact path='/cart'>
-            <Cart/>
+        <Route exact path="/cart">
+          <Cart />
         </Route>
-        <Route exact path='/products'>
-            <Products/>
+        <Route exact path="/products">
+          <Products />
         </Route>
-        <Route exact path='/products/:id' children={<SingleProduct/>}>
-            <SingleProduct/>
+        <Route exact path="/products/:id" children={<SingleProduct />}>
+          <SingleProduct />
         </Route>
-        <Route exact path='/checkout'>
-            <Checkout/>
-        </Route>
+        <PrivateRoute exact path="/checkout">
+          <Checkout />
+        </PrivateRoute>
         <Route exact path="*">
-            <Error/>
+          <Error />
         </Route>
-       </Switch>
-       <Footer/>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
