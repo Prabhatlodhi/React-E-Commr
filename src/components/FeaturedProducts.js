@@ -28,10 +28,10 @@ const FeaturedProducts = () => {
         {featured.slice(0, 3).map((product) => {
           return <Product key={product.id} {...product} />;
         })}
-        <Link to="/products" className="btn">
-          all products
-        </Link>
       </div>
+      <Link to="/products" className="btn">
+        all products
+      </Link>
     </Wrapper>
   );
 };
@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   .btn {
     display: block;
     width: 148px;
-    margin: 0 auto;
+    margin: 0px auto;
     text-align: center;
   }
   @media (min-width: 576px) {
