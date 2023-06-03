@@ -1,8 +1,10 @@
 //domain/.netlify/functions/hello
 
 const items = [
-    {id:}
-]
+  { id: 1, name: "john" },
+  { id: 2, name: "johssn" },
+];
+
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
